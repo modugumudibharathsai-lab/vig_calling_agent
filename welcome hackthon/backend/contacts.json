@@ -1,0 +1,52 @@
+[
+  {
+    "phone_number": "+14155550199",
+    "name": "Sarah Chen (Wife)",
+    "category": "VIP",
+    "company": "Personal",
+    "notes": "Always transfer if urgent, family emergency bypass enabled",
+    "always_transfer": true,
+    "always_block": false,
+    "screen_first": false
+  },
+  {
+    "phone_number": "+16505550143",
+    "name": "Dr. Miller (Stanford Health)",
+    "category": "VIP",
+    "company": "Stanford Health Care",
+    "notes": "Doctor appointment & prescription results",
+    "always_transfer": false,
+    "always_block": false,
+    "screen_first": true
+  },
+  {
+    "phone_number": "+14155550172",
+    "name": "Marcus Vance",
+    "category": "COLLEAGUE",
+    "company": "DeepMind / Engineering Lead",
+    "notes": "Work colleague. Screen unless marked high urgency",
+    "always_transfer": false,
+    "always_block": false,
+    "screen_first": true
+  },
+  {
+    "phone_number": "+18005550111",
+    "name": "DoorDash / FedEx Delivery",
+    "category": "TRUSTED",
+    "company": "Logistics Dispatch",
+    "notes": "Allow AI agent to instruct drop-off at front door",
+    "always_transfer": false,
+    "always_block": false,
+    "screen_first": true
+  },
+  {
+    "phone_number": "+18005559999",
+    "name": "RoboDialer Fraud Syndicate",
+    "category": "BLOCKLIST",
+    "company": "Known Solar/Warranty Scammers",
+    "notes": "Known robocaller with 1500+ community flags",
+    "always_transfer": false,
+    "always_block": true,
+    "screen_first": false
+  }
+]

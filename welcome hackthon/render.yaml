@@ -1,0 +1,23 @@
+services:
+  # Next.js Frontend
+  - type: web
+    name: antigravity-frontend
+    env: node
+    plan: free
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.x
+      - key: NEXT_PUBLIC_BACKEND_URL
+        value: https://antigravity-backend.onrender.com
+
+  # Python FastAPI Backend
+  - type: web
+    name: antigravity-backend
+    env: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
