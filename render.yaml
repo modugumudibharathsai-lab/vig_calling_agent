@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: callguardianai
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    disk:
+      name: callguardianai-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-3.8-flash
+      - key: CALLGUARDIAN_DB_PATH
+        value: /var/data/callguardian.db
+      - key: AUTH_COOKIE_SECURE
+        value: "true"
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://callguardianai.onrender.com
+      - key: AUTH_PASSWORD_MIN_LENGTH
+        value: "8"
+      - key: AUTH_PASSWORD_REQUIRE_UPPERCASE
+        value: "true"
+      - key: AUTH_PASSWORD_REQUIRE_DIGIT
+        value: "true"
+      - key: AUTH_PASSWORD_REQUIRE_SPECIAL
+        value: "true"
